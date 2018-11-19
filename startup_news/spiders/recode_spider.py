@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-from urlparse import urlparse
+from urllib.parse import urlparse
 import scrapy
 
 from startup_news.items import Article

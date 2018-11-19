@@ -3,7 +3,7 @@ from scrapy.loader.processors import TakeFirst, MapCompose, Join
 
 
 class TechCrunchArticleLoader(ItemLoader):
-    default_input_processor = MapCompose(lambda s: unicode(s, "utf-8"), unicode.strip)
+    default_input_processor = MapCompose(lambda s: unicode(s,  "utf-8"), unicode.strip)
     default_output_processor = Join()
 
     title_in = MapCompose(unicode.strip, unicode.title)
