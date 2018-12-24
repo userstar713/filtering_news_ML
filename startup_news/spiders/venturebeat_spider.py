@@ -48,11 +48,11 @@ class VentureBeatSpider(scrapy.Spider):
             yield request
 
 
-    def parse_article(self, response):
-        l = VentureBeatArticleLoader(Article(), response=response)
-        l.add_xpath('title', '//h1/text()')
-        l.add_xpath('text', '//div[@class="article-content"]//text()')
-        l.add_xpath('tags', '//a[@rel="tag"]/text()')
-        l.add_value('date', str(response.meta['date']))
-        l.add_value('url', response.url)
-        return l.load_item()
+    # def parse_article(self, response):
+    #     l = VentureBeatArticleLoader(Article(), response=response)
+    #     l.add_xpath('title', '//h1/text()')
+    #     l.add_xpath('text', '//div[@class="article-content"]//text()')
+    #     l.add_xpath('tags', '//a[@rel="tag"]/text()')
+    #     l.add_value('date', str(response.meta['date']))
+    #     l.add_value('url', response.url)
+    #     return l.load_item()
